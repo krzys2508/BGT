@@ -1,9 +1,5 @@
-import pandas as pd
+
 import csv
-
-out = pd.read_csv('charts.csv')
-
-# print(out.head(10))
 
 
 title_frueq = dict()
