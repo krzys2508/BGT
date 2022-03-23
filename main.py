@@ -2,16 +2,17 @@
 import csv
 
 
-title_frueq = dict()
-with open('./charts.csv', encoding="utf8") as out2:
-    file = csv.DictReader(out2)
-    for lines in file:
-        if lines["title"] not in title_frueq:
-            title_frueq[lines["title"]] = 1
+count_songs = dict()
+with open('./charts.csv', mode='r', encoding="utf8") as file:
+    csvFile = csv.DictReader(file)
+    for lines in csvFile:
+        if lines["title"] in count_songs:
+            count_songs[lines["title"]] += 1
         else:
-            title_frueq[lines["title"]] += 1
-    final_frueq = dict(sorted(title_frueq.items(), key=lambda x: x[1]))
-    lst = list(final_frueq.items())
-print(lst[0])
-print(lst[:3])
-#print(list(final_frueq)[:3]))
+            count_songs[lines["title"]] = 1
+    count_songs2 = dict(sorted(count_songs.items(), key=lambda x: x[1]))
+for x in list(count_songs2)[0:3]:
+    print(count_songs2[x])
+for x in list(count_songs2))[:3]:
+    print(count_songs2[x])
+
