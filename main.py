@@ -13,5 +13,5 @@ with open('./charts.csv', encoding="utf8") as out2:
     final_frueq = dict(sorted(title_frueq.items(), key=lambda x: x[1]))
     lst = list(final_frueq.items())
 print(lst[0])
-print(lstreversed[0])
+print(lst[:3])
 #print(list(final_frueq)[:3]))
