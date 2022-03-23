@@ -12,7 +12,7 @@ with open('./charts.csv', encoding="utf8") as out2:
             title_frueq[lines["title"]] += 1
     final_frueq = dict(sorted(title_frueq.items(), key=lambda x: x[1]))
     lst = list(final_frueq.items())
-    lstreversed = list(reversed(final_frueq.items()))
+    lstreversed = dict(reversed(list(d.items())))
 print(lst[0])
 print(lstreversed[0])
 #print(list(reversed(final_frueq)[0]))
