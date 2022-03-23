@@ -14,10 +14,6 @@ print(titles[titles['rank'] == max])
 print("Least common song")
 print(titles[titles['rank'] == min])
 
-singer = out[out['artist'] == "Shakira"]
-plt.plot(singer.groupby('date').min('rank')[['rank']])
-plt.title("Shakira over time")
-plt.show()
 
 title_frueq = dict()
 with open('./charts.csv', encoding="utf8") as out2:
